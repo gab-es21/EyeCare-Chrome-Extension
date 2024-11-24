@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "EyeCare",
+    "version": "1.0",
+    "permissions": ["alarms", "scripting", "activeTab", "storage"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "settings.html",
+      "default_icon": {
+        "16": "icons/EyeCare_icon_16x16.png",
+        "48": "icons/EyeCare_icon_48x48.png",
+        "128": "icons/EyeCare_icon_128x128.png"
+      }
+    },
+    "icons": {
+      "16": "icons/EyeCare_icon_16x16.png",
+      "48": "icons/EyeCare_icon_48x48.png",
+      "128": "icons/EyeCare_icon_128x128.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["assets/gifs/gifs.json"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+
+  }
+  

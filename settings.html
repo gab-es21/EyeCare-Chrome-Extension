@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EyeCare Settings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="settings">
+    <h1>EyeCare Settings</h1>
+
+    <!-- Functionality Toggle -->
+    <div class="section compact">
+      <h2>Functionality</h2>
+      <label class="switch">
+        <input type="checkbox" id="functionalityToggle" checked>
+        <span class="slider round"></span>
+      </label>
+    </div>
+    
+    <div id="allSettings">
+
+      <!-- Sound Toggle -->
+      <div class="section compact">
+        <h2>Sound</h2>
+        <div id="soundToggle" class="icon" title="Toggle Sound">
+          <span id="soundIcon">🔊</span>
+        </div>
+      </div>
+
+      <!-- Schedule -->
+      <div class="section schedule compact">
+          <h2>Schedule</h2>
+          <div class="schedule-controls">
+              <input type="checkbox" id="scheduleToggle" title="Enable Schedule">
+              <div class="time-inputs">
+                  <label for="startTime">
+                      <span>Start:</span>
+                      <input type="time" id="startTime">
+                  </label>
+                  <label for="endTime">
+                      <span>End:</span>
+                      <input type="time" id="endTime">
+                  </label>
+              </div>
+          </div>
+      </div>
+
+      <!-- Notification Interval -->
+      <div class="section compact">
+        <h2>Interval</h2>
+        <label for="intervalSlider">Interval: <span id="intervalValue">20</span> min</label>
+        <input type="range" id="intervalSlider" min="5" max="60" step="5" value="20">
+      </div>
+
+      <!-- Animation Selection -->
+      <div class="section compact">
+        <h2>Animation</h2>
+        <select id="animationDropdown">
+          <option value="random">Random</option>
+          <option value="eyes_1_googlie.gif">Googly Eyes</option>
+          <option value="eyes_2_girl.gif">Female Eyes</option>
+          <option value="eyes_3_sleepy.gif">Sleepy Eyes</option>
+          <option value="eyes_4_blue.gif">Blue Eyes</option>
+        </select>
+        <div id="gifPreview">
+          <img id="selectedGif" src="" alt="Selected GIF" class="gif-preview">
+        </div>
+      </div>
+
+    </div> <!-- End of allSettings -->
+
+  <script src="settings.js"></script>
+</body>
+</html>
